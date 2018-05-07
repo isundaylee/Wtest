@@ -1,0 +1,275 @@
+/* Layout Stylesheet */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html, body
+{
+	margin:           0;
+	padding:          0;
+}
+
+html
+{
+	overflow:         hidden;
+	background:       #FFA400;
+}
+
+#contentMenu, #content, #contentRightEdge, #contentLeftEdge, #headerMain, #guiLock, #bodyLock, #contentsLogin
+{
+	position:         absolute;
+}
+
+#guiLock
+{
+	top:              0px;
+	left:             0px;
+	background-color: #FFFFFF;
+	filter:alpha(opacity=0);
+	opacity: 0;
+	-moz-opacity:0;
+	z-index : 300;
+}
+
+#bodyLock
+{
+	background-color: #FFFFFF;
+	left:             166px;
+	top:              123px;
+	overflow:         auto;
+	position:         absolute;
+	padding-top:      3px;
+	padding-left:     10px;
+    z-index: 10;
+}
+
+#headerMain
+{
+	background-color: #FFFFFF;
+	height            166px;
+	top:              0px;
+	left:             0px;
+}
+
+#footerMain
+{
+	height            64px;
+	left:             0px;
+	position:         absolute;
+}
+
+#contentMenu
+{
+	background-color: #FFFFFF;
+	width:            155px;
+	top:              123px;
+	left:             11px;
+	position:         absolute;
+}
+
+#contents
+{
+	background-color: #FFFFFF;
+	left:             166px;
+	top:              123px;
+	overflow:         auto;
+	padding-top:      0px;
+	padding-left:     10px;
+	position:         absolute;
+	
+}
+
+#contentsLogin
+{
+	background-color: #FFFFFF;
+	left:             11px;
+	top:              123px;
+	overflow:         auto;
+}
+
+#popup
+{
+	position:         absolute;
+}
+
+#popupContainer
+{
+	overflow:         hidden;
+	position:         absolute;
+    z-index:          400;
+    width:            100%;
+    height:           100%;
+    left:             0px;
+    top:              0px;
+}
+
+#contentRightEdge
+{
+	background:       url('../../images/background_right.gif') repeat-y;
+	width:            11px;
+	top:              123px;
+	position:         absolute;
+}
+
+#contentLeftEdge
+{
+	background:       url('../../images/background_left.gif') repeat-y;
+	width:            11px;
+	top:              123px;
+	position:         absolute;
+}
+
+#header{
+	width:100%;
+	height: 58px;
+}
+
+#headerLogo {
+	width:100%;
+	padding: 10px;
+	height: 65px;
+	border: 0px solid #CCCCCC;
+	background-color: #FFFFFF;
+}
+
+#header TABLE {
+	width:100%;
+	background-color: #FFFFFF;
+}
+
+#container {
+	width: 100%;
+	text-align: center;
+}
+
+#bodyblock {
+/*	position: relative;
+	min-width: 778px;
+	height: 100%;
+	overflow: auto;
+	vertical-align: top;
+    width: 98%;
+	background-color: #FFFFFF;*/
+    padding: 0px 10px 10px 10px;
+    height: 100%;
+}
+
+#bar {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	width: auto;
+	text-align: right;
+	clear: both;
+	vertical-align: center;
+	padding-right: 30px;
+	background: #666F74;
+}
+
+#topCurve {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	width: auto;
+	text-align: right;
+	clear: both;
+	vertical-align: middle;
+	padding-right: 30px;
+	background: #FFFFFF;
+}
+
+#menublock {
+	min-width: 156px;
+	width: 100%;
+	height: 100%;
+	padding: 12px;
+	padding-top: 0px;
+	padding-right: 0px;
+	vertical-align: top;
+	background-color: #FFFFFF;
+}
+
+#thirdMenuContainer {
+	vertical-align: top;
+}
+
+#left-col {
+	border: 1px solid #EEEEEE;
+	vertical-align: top;
+	text-align: left;
+	width: 144px;
+	background-color: #CCCCCC;
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+}
+
+#left-col a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #46008f;
+	text-decoration: none;
+}
+
+a#ThirdSubmenuItem:hover {
+	color: #ffa400;
+}
+
+
+#content {
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+}
+
+#footer {
+	padding: 2px 0px 7px 0px;
+	margin: 0px;
+	width: 100%;
+	text-align: left;
+	vertical-align: middle;
+	background: transparent;
+	color: #46008F;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.errorMessageBlock {
+	text-align: left;
+	margin-bottom: 10px;
+	margin-top: 4px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #CC0000;
+	background-color: #FFCCCC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #CC0000;
+	padding: 5px;
+	white-space: nowrap;
+	overflow: visible;
+}
+
+.warningNote {
+    text-align: right;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #FF0000;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.validation-failed {
+	background-color: #FFCCCC;
+}
+
+#errorMessageBlock * {
+	padding: 0px;
+	margin: 0px;
+	white-space: nowrap;
+}

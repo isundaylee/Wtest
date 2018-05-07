@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+  <HEAD>
+  <LINK rel="stylesheet" href="../include/css/fonts.css" type="text/css">
+  <SCRIPT type="text/javascript" src="../include/scripts/prototype.js"></SCRIPT>
+  <SCRIPT type="text/javascript" src="../include/scripts/prototype-ext.js"></SCRIPT>
+  <SCRIPT type="text/javascript">
+  Event.onDOMReady ( function() {
+      layout();
+      window.onresize = layout;
+  });
+  layout = function() {
+    var h = document.viewport.getHeight();
+    var w = document.viewport.getWidth();
+    
+    $("bg").style.position = "absolute";
+    $("bg").style["z-index"] = "1";
+	$("bg").style.left = "0px";
+	$("bg").style.top = "0px";
+	$("bg").style.height = h + "px";
+	$("bg").style.width = w + "px";
+
+	$("emailDiv").style.position = "absolute";    $("emailDiv").style["z-index"] = "2";
+	$("emailDiv").style.top = "200px"
+	$("emailDiv").style.width = "500px";
+	l = (w - 500)/2;
+	$("emailDiv").style.left = l + "px";
+
+    Event.observe($("submitBtn"), "click", validateMe);
+  }
+  validateMe = function(event) {
+    if(/\w{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/.test($("email").value)) {
+        $("emailForm").submit();
+    } else {
+        alert("Please provide a valid email address.");
+    }
+  }
+
+  </SCRIPT>
+
+  <STYLE type="text/css">
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  html, body
+  {
+    margin:           0;
+    padding:          0;
+  }
+
+  html
+  {
+    overflow:         hidden;
+  }
+</STYLE>
+
+  </HEAD>
+  <BODY>
+    <DIV id="bg" height="100%" width="100%">
+		<IMG src="../images/guest_bg_preview.gif" height="100%" width="100%"></IMG>
+    </DIV>
+    <DIV id="emailDiv">
+
+            <TABLE>
+                <TR>
+                    <TD class="MainBody1">Enter email address</TD>
+                    <TD>
+                        <FORM id="emailForm" action="guest_access.php" method="post">
+                            <INPUT type="text" name="email" id="email">
+                            </INPUT>
+                        </FORM>
+                    </TD>
+                    <TD><INPUT id="submitBtn" type="submit" value="Submit"></INPUT></TD>
+                <TR>
+            </TABLE>
+        </FORM>
+    </DIV>
+
+  </BODY>
+</HTML>
